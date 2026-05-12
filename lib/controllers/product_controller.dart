@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manage_flower_store/data/services/attribute_model.dart';
 import '../data/models/product_model.dart';
 import '../data/models/brand_model.dart';
 import '../data/models/category_model.dart';
@@ -6,7 +7,6 @@ import '../data/models/attribute_model.dart';
 import '../data/services/product_service.dart';
 import '../data/services/brand_service.dart';
 import '../data/services/category_service.dart';
-import '../data/services/attribute_service.dart';
 import 'dart:async';
 
 class ProductController extends ChangeNotifier {

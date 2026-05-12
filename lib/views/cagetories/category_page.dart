@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:manage_flower_store/controllers/category_controller.dart';
+import 'package:manage_flower_store/data/models/category_model.dart';
+import 'package:provider/provider.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({super.key});

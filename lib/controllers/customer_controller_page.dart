@@ -1,9 +1,9 @@
-import 'package:e_commerce_web_admin/data/models/address_model.dart';
-import 'package:e_commerce_web_admin/data/models/customer_model.dart';
-import 'package:e_commerce_web_admin/data/models/order_model.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:intl/intl.dart'; // Đảm bảo bạn đã thêm intl vào pubspec.yaml
+import 'package:intl/intl.dart';
+import 'package:manage_flower_store/data/models/address_model.dart';
+import 'package:manage_flower_store/data/models/customer_model.dart';
+import 'package:manage_flower_store/data/models/order_model.dart'; // Đảm bảo bạn đã thêm intl vào pubspec.yaml
 
 class CustomerDetailPage extends StatefulWidget {
   final CustomerModel customer;

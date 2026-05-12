@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../data/models/brand_model.dart';
-import '../data/services/brand_service.dart';
-import '../data/services/category_service.dart';
-import '../data/models/category_model.dart';
+import 'package:manage_flower_store/data/models/brand_model.dart';
+import 'package:manage_flower_store/data/models/category_model.dart';
+import 'package:manage_flower_store/data/services/brand_service.dart';
+import 'package:manage_flower_store/data/services/category_service.dart';
 
 class BrandController extends ChangeNotifier {
   final BrandService _service = BrandService();

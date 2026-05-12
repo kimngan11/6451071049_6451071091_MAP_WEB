@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_quill/flutter_quill.dart';
+import 'package:manage_flower_store/controllers/attribute_controller.dart';
+import 'package:manage_flower_store/controllers/auth_controller.dart';
+import 'package:manage_flower_store/controllers/brands/brand_controller.dart';
+import 'package:manage_flower_store/controllers/category_controller.dart';
+import 'package:manage_flower_store/controllers/product_controller.dart';
+import 'package:manage_flower_store/routes/app_routes.dart';
+import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 void main() async {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:manage_flower_store/controllers/brands/brand_controller.dart';
 import 'package:provider/provider.dart';
-import '../../controllers/brand_controller.dart';
 import '../../data/models/brand_model.dart';
 
 class BrandsPage extends StatelessWidget {

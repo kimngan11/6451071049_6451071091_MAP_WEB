@@ -1,6 +1,6 @@
-import 'package:draf_project_web/views/customers/customers_page.dart';
-import 'package:draf_project_web/views/product_review/all_review_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:manage_flower_store/views/customers/customers_page.dart';
+import 'package:manage_flower_store/views/product_review/all_review_screen.dart';
 import '../views/auth/login_page.dart';
 import '../views/layout/admin_layout.dart';
 import '../views/cagetories/category_page.dart';
