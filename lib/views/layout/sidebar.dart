@@ -47,7 +47,7 @@ class _SidebarState extends State<Sidebar> {
                 const SizedBox(width: 12),
                 const Flexible(
                   child: Text(
-                    "SHOE ADMIN",
+                    "FLOWER ADMIN",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
