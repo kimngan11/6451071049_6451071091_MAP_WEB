@@ -1,25 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_quill/flutter_quill.dart';
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(title: const Text("Admin Panel")),
-        body: const Center(child: Text("Firebase Connected")),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthController()..checkLogin()),
+        ChangeNotifierProvider(create: (_) => CategoryController()),
+        ChangeNotifierProvider(create: (_) => ProductController()),
+        ChangeNotifierProvider(create: (_) => AttributeController()),
+        ChangeNotifierProvider(create: (_) => BrandController()),
+      ],
+      child: Builder(
+        builder: (context) {
+          final auth = context.watch<AuthController>();
+          return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            // ADD THIS BLOCK
+            localizationsDelegates: const [
+              FlutterQuillLocalizations.delegate, // FIX LỖI
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: const [Locale('en'), Locale('vi')],
+            routerDelegate: AppRouterDelegate(auth),
+            routeInformationParser: AppRouteParser(),
+          );
+        },
       ),
     );
   }
